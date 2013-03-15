@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<!-- Jesse James -->
+<!-- 3-14-2013 -->
+<!-- MiU Project 2 1303 -->
+
+<html>
+	<!-- Header -->
+	<head>
+    	<meta charset="utf-8" />
+    	<meta name="description" content="Video game review welcome page" />
+        <meta name="keywords" content="videogames, list, reviews" />
+    	<meta name="robots" content="noindex, nofollow" />
+    	<meta name="viewport" content="user-scalable=no, width=device-width" />
+    	<meta name="viewport" content="target-densitydpi=device-dpi" />
+    	<meta name="HandheldFriendly" content="True" />
+    	<meta name="MobileOpimized" content="320" />
+		<title>Add a video game review.</title>
+        <link rel="stylesheet" href="css/styles.css" type="text/css" />
+	</head>
+    <!-- Body -->
+	<body>
+   	<h1 id="addGameReview">Add A Game Review</h1>
+    <!-- Input Fields -->
+    <form action="#" method="post" id="gameReviewForm" class="gameReviewForm" />
+      <fieldset id="addItemField">
+        <legend>Game Review</legend>
+        	<nav>
+        		<!-- These links are handled by JavaScript -->
+				<input type="button" value="Clear Data" title="clearData" id="clearData" class="button">
+				<input type="button" value="Display Data" title="displayData" id="displayData" class="button">
+			</nav>
+          <ul id="addItemForm">
+              <li id="gameCatergoryList">
+                <label for="gameCatergory">Game Catergory: </label>
+              </li>
+              <li>
+                  <label for="gameName">Game Name: </label>
+                  <input type="text" id="gameName" placeholder="The Legend of Zelda: Skyward Sword" />
+              </li>
+              <li>
+                  <label for="gamePublisher">Game Publisher: </label>
+                  <input type="text" id="gamePublisher" placeholder="Nintendo" />
+              </li>
+              <li>
+                  <label for="gameRelease">Game Release Date: </label>
+                  <input type="date" id="gameRelease" /> 
+              </li>
+              <li id="rl">
+                  <label id="ratingLabel" for="gameRate"></label>
+                  <div id="gameRating">
+					<input class="bar" type="range" id="gameRate" value="5" min="0" max="10" onMouseOver="rangevalue.value=value" onchange="rangevalue.value=value"/>
+					<span class="highlight"></span>
+					<output id="rangevalue"></output>
+				  </div>
+              </li>
+              <li id="gameConsole">Game Console:
+                  <ul id="consoleList">
+                      <li>
+                          <input type="checkbox" value="Xbox 360" id="xbox360" name="console" />
+                          <label for="xbox360" class="xbox360"> Xbox 360</label>
+                      </li>
+                      <li>
+                          <input type="checkbox" value="Playstation 3" id="ps3" name="console" />
+                          <label for="ps3" class="ps3"> Playstation 3</label>
+                      </li>
+                      <li>
+                          <input type="checkbox" value="Wii" id="wii" name="console" />
+                          <label for="wii" class="wii"> Wii</label>
+                      </li>
+                  </ul>
+              </li>
+              <li id="comm">
+                  <label for="comments">Comments: </label><textarea id="comments" placeholder="This game was amazing A++!"></textarea>
+              </li>
+          </ul>
+        </fieldset>
+      <!-- Submit Button -->
+      <input id="submitButton" type="button" value="Add Review" name="submit" class="button" />
+	  </body>
+      <script type="text/javascript" src="js/json.js"></script>
+	  <script type="text/javascript" src="js/main.js"></script> 
+</html>
